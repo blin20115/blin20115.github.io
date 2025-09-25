@@ -67,10 +67,14 @@ body.dark header {
   color: #0077ff;
 }
 
+/* Active tab: black in light mode, white in dark mode */
 .navbar a.active {
   font-weight: 700;
   color: black;
-  /* bold active tab is black */
+}
+
+body.dark .navbar a.active {
+  color: #f5f5f5;
 }
 
 /* Toggle button */
@@ -81,6 +85,17 @@ body.dark header {
   font-weight: 600;
   font-size: 0.9rem;
   color: inherit;
+
+  /* Remove focus outline and highlight */
+  outline: none;
+}
+
+#mode-toggle:focus {
+  outline: none;
+}
+
+#mode-toggle:active {
+  background: none;
 }
 
 /* Main content area */

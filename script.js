@@ -18,7 +18,15 @@ links.forEach(link => {
 
 // Light/Dark mode toggle
 const toggleBtn = document.getElementById('mode-toggle');
+
 toggleBtn.addEventListener('click', () => {
+  // Toggle dark class on body
   document.body.classList.toggle('dark');
-  toggleBtn.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
+
+  // Change the emoji
+  if (document.body.classList.contains('dark')) {
+    toggleBtn.textContent = '☀️';
+  } else {
+    toggleBtn.textContent = '🌙';
+  }
 });
