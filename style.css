@@ -1,11 +1,11 @@
-/* Reset */
+/* -------------------- Reset -------------------- */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body */
+/* -------------------- Body -------------------- */
 body {
   font-family: 'Poppins', sans-serif;
   min-height: 100vh;
@@ -17,13 +17,12 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Dark mode styles */
 body.dark {
   background-color: #1e1e1e;
   color: #f5f5f5;
 }
 
-/* Navbar */
+/* -------------------- Navbar -------------------- */
 header {
   background-color: white;
   color: #333;
@@ -64,10 +63,9 @@ body.dark header {
 }
 
 .navbar a:hover {
-  color: #0077ff;
+  color: #66b3ff;
 }
 
-/* Active tab: black in light, white in dark */
 .navbar a.active {
   font-weight: 700;
   color: black;
@@ -94,7 +92,7 @@ body.dark .navbar a.active {
   background: none;
 }
 
-/* Main content area */
+/* -------------------- Main Content -------------------- */
 main {
   flex: 1;
   display: flex;
@@ -106,17 +104,14 @@ main {
   padding-top: 70px;
 }
 
-/* Tab content panels */
 .tab-content {
-  max-width: 600px;
+  max-width: 700px;
   margin: auto;
   opacity: 0;
   transform: scale(0.95);
   transition: opacity 0.4s ease, transform 0.4s ease;
   position: relative;
   display: none;
-  background-color: transparent;
-  /* removed faint box */
 }
 
 .tab-content.active {
@@ -125,32 +120,7 @@ main {
   display: block;
 }
 
-/* Home wrapper */
-.home-wrapper h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-
-.home-wrapper p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-}
-
-/* Footer */
-footer {
-  background: #f1f1f1;
-  text-align: center;
-  padding: 15px;
-  font-size: 0.9em;
-  transition: background 0.3s ease, color 0.3s ease;
-}
-
-body.dark footer {
-  background: #222;
-  color: #f5f5f5;
-}
-
-/* Home wrapper as a flex container */
+/* -------------------- Home Wrapper -------------------- */
 .home-wrapper {
   display: flex;
   align-items: center;
@@ -161,13 +131,24 @@ body.dark footer {
   padding: 20px;
 }
 
-/* Left column (text) */
 .home-left {
   flex: 1;
   text-align: left;
+  max-width: 650px;
+  /* increased width for longer lines */
 }
 
-/* Right column (image) */
+.home-left h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.home-left p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
 .home-right {
   flex: 1;
   display: flex;
@@ -178,10 +159,9 @@ body.dark footer {
   max-width: 100%;
   height: auto;
   border-radius: 10px;
-  /* optional styling */
 }
 
-/* Responsive for smaller screens */
+/* Responsive */
 @media (max-width: 768px) {
   .home-wrapper {
     flex-direction: column;
@@ -194,12 +174,12 @@ body.dark footer {
   }
 }
 
+/* -------------------- Footer -------------------- */
 footer {
   background: #f1f1f1;
   text-align: center;
   padding: 15px;
   font-size: 1.5rem;
-  /* bigger icons */
   transition: background 0.3s ease, color 0.3s ease;
 }
 
@@ -211,11 +191,77 @@ footer a {
 }
 
 footer a:hover {
-  color: #0077ff;
-  /* hover color for icons */
+  color: #66b3ff;
 }
 
 body.dark footer {
   background: #222;
   color: #f5f5f5;
+}
+
+/* -------------------- Timeline -------------------- */
+.timeline {
+  position: relative;
+  max-width: 700px;
+  margin: 40px auto;
+  padding-left: 20px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 10px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #000;
+  /* black in light mode */
+  transition: background-color 0.3s ease;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 30px;
+  padding-left: 30px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.timeline-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -3px;
+  width: 10px;
+  height: 10px;
+  background-color: #000;
+  /* black in light mode */
+  border-radius: 50%;
+  top: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.timeline-content h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.timeline-content p {
+  margin: 3px 0;
+  color: #555;
+  transition: color 0.3s ease;
+}
+
+body.dark .timeline::before,
+body.dark .timeline-dot {
+  background-color: #fff;
+  /* white in dark mode */
+}
+
+body.dark .timeline-content p {
+  color: #ccc;
 }
