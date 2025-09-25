@@ -1,77 +1,86 @@
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Body */
 body {
   font-family: 'Poppins', sans-serif;
   height: 100vh;
   display: flex;
   flex-direction: column;
   background-color: white;
-  /* Change background to white */
   color: #333;
-  /* Dark text for contrast */
   scroll-behavior: smooth;
 }
 
 /* Navbar */
 header {
   background-color: white;
-  /* fully white navbar */
   color: #333;
-  /* default text color */
   border-bottom: 1px solid #eee;
-  /* subtle separator, optional */
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
 }
 
+.navbar {
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
 .navbar a {
   color: #333;
-  /* dark text */
   text-decoration: none;
-  padding: 8px 12px;
-  /* optional spacing */
+  padding: 8px 0;
+  /* remove background effect */
   transition: font-weight 0.2s ease, color 0.2s ease;
   font-weight: 500;
-  /* normal weight */
-  border-radius: 0;
-  /* remove rounded background */
 }
 
 .navbar a:hover {
   color: #0077ff;
-  /* subtle hover color change */
+  /* optional subtle hover */
 }
 
 .navbar a.active {
   font-weight: 700;
-  /* bold for active tab */
+  /* bold only */
   color: #0077ff;
-  /* optional highlight color */
+  /* highlight text color */
   background: none;
-  /* remove any background */
+  /* no square background */
 }
 
-/* Content area */
+/* Main content area */
 main {
   flex: 1;
-  /* fill remaining vertical space */
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   overflow: hidden;
   position: relative;
+  padding-top: 70px;
+  /* space for fixed navbar */
 }
 
+/* Tab content panels */
 .tab-content {
   background-color: white;
-  /* white content panels */
   position: absolute;
   max-width: 600px;
   opacity: 0;
@@ -85,20 +94,27 @@ main {
   position: relative;
 }
 
+/* Home wrapper */
+.home-wrapper {
+  max-width: 600px;
+  margin: auto;
+}
+
+.home-wrapper h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.home-wrapper p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
 /* Footer */
 footer {
   background: #f1f1f1;
   text-align: center;
   padding: 15px;
   font-size: 0.9em;
-}
-
-h1 {
-  color: #0077ff;
-  /* keep your headings blue */
-}
-
-p {
-  color: #333;
-  /* dark text for readability */
 }
