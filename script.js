@@ -1,3 +1,4 @@
+// Tab switching
 const links = document.querySelectorAll('.tab-link');
 const contents = document.querySelectorAll('.tab-content');
 
@@ -13,4 +14,11 @@ links.forEach(link => {
       c.classList.toggle('active', c.id === target);
     });
   });
+});
+
+// Light/Dark mode toggle
+const toggleBtn = document.getElementById('mode-toggle');
+toggleBtn.addEventListener('click', () => {
+  document.body.classList.toggle('dark');
+  toggleBtn.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
 });
