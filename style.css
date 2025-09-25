@@ -81,17 +81,23 @@ main {
 /* Tab content panels */
 .tab-content {
   background-color: white;
-  position: absolute;
   max-width: 600px;
+  margin: auto;
   opacity: 0;
   transform: scale(0.95);
   transition: opacity 0.4s ease, transform 0.4s ease;
+  position: relative;
+  /* <-- change from absolute to relative */
+  display: none;
+  /* hide by default */
 }
 
+/* Active tab */
 .tab-content.active {
   opacity: 1;
   transform: scale(1);
-  position: relative;
+  display: block;
+  /* show active tab */
 }
 
 /* Home wrapper */
