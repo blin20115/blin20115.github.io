@@ -18,24 +18,43 @@ body {
 
 /* Navbar */
 header {
-  background-color: #ffffff;
-  /* White navbar */
-  color: #0077ff;
-  /* Blue text links */
-  border-bottom: 1px solid #ddd;
-  /* subtle separation from page */
+  background-color: white;
+  /* fully white navbar */
+  color: #333;
+  /* default text color */
+  border-bottom: 1px solid #eee;
+  /* subtle separator, optional */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 .navbar a {
-  color: #0077ff;
-  /* Blue links */
+  color: #333;
+  /* dark text */
+  text-decoration: none;
+  padding: 8px 12px;
+  /* optional spacing */
+  transition: font-weight 0.2s ease, color 0.2s ease;
+  font-weight: 500;
+  /* normal weight */
+  border-radius: 0;
+  /* remove rounded background */
 }
 
-.navbar a:hover,
-.navbar a.active {
-  background: rgba(0, 119, 255, 0.1);
-  /* light hover effect */
+.navbar a:hover {
   color: #0077ff;
+  /* subtle hover color change */
+}
+
+.navbar a.active {
+  font-weight: 700;
+  /* bold for active tab */
+  color: #0077ff;
+  /* optional highlight color */
+  background: none;
+  /* remove any background */
 }
 
 /* Content area */
