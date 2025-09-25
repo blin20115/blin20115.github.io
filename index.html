@@ -1,56 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bobo Lin</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-  <!-- Navigation -->
+  <!-- Navigation Tabs -->
   <header>
     <nav class="navbar">
-      <a href="#home" class="logo">Bobo Lin</a>
+      <div class="logo">Bobo Lin</div>
       <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#" class="tab-link active" data-target="home">Home</a></li>
+        <li><a href="#" class="tab-link" data-target="about">About</a></li>
+        <li><a href="#" class="tab-link" data-target="projects">Projects</a></li>
+        <li><a href="#" class="tab-link" data-target="contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Sections -->
-  <section id="home" class="section hero">
-    <h1>Hello, I'm Bobo ??</h1>
-    <p>Welcome to my personal site</p>
-  </section>
+  <!-- Tabbed Content Panels -->
+  <main>
+    <section id="home" class="tab-content active">
+      <h1>Hello 👋</h1>
+      <p>Welcome to my one-page site!</p>
+    </section>
 
-  <section id="about" class="section">
-    <h2>About Me</h2>
-    <p>I love math, computer science, and building cool projects.</p>
-  </section>
+    <section id="about" class="tab-content">
+      <h1>About Me</h1>
+      <p>I’m passionate about math, computer science, and building projects.</p>
+    </section>
 
-  <section id="projects" class="section">
-    <h2>Projects</h2>
-    <div class="cards">
-      <div class="card">Project 1</div>
-      <div class="card">Project 2</div>
-      <div class="card">Project 3</div>
-    </div>
-  </section>
+    <section id="projects" class="tab-content">
+      <h1>Projects</h1>
+      <p>Here are a few of my favorite works…</p>
+    </section>
 
-  <section id="contact" class="section">
-    <h2>Contact</h2>
-    <p>Email me at <a href="mailto:you@example.com">you@example.com</a></p>
-  </section>
+    <section id="contact" class="tab-content">
+      <h1>Contact</h1>
+      <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
+    </section>
+  </main>
 
   <footer>
-    Bobo Lin
+    © 2025 Bobo Lin
   </footer>
 
   <script src="script.js"></script>
 </body>
+
 </html>

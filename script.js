@@ -1,11 +1,18 @@
-// Fade-in on scroll
-const sections = document.querySelectorAll('.section');
-const reveal = () => {
-  const trigger = window.innerHeight * 0.85;
-  sections.forEach(sec => {
-    const top = sec.getBoundingClientRect().top;
-    if (top < trigger) sec.classList.add('visible');
+const links = document.querySelectorAll('.tab-link');
+const contents = document.querySelectorAll('.tab-content');
+
+links.forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const target = link.dataset.target;
+
+    // Update active tab
+    links.forEach(l => l.classList.remove('active'));
+    link.classList.add('active');
+
+    // Show correct section
+    contents.forEach(c => {
+      c.classList.toggle('active', c.id === target);
+    });
   });
-};
-window.addEventListener('scroll', reveal);
-reveal(); // run on load
+});
