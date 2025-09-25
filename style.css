@@ -67,7 +67,7 @@ body.dark header {
   color: #0077ff;
 }
 
-/* Active tab: black in light mode, white in dark mode */
+/* Active tab: black in light, white in dark */
 .navbar a.active {
   font-weight: 700;
   color: black;
@@ -85,16 +85,12 @@ body.dark .navbar a.active {
   font-weight: 600;
   font-size: 0.9rem;
   color: inherit;
-
-  /* Remove focus outline and highlight */
   outline: none;
 }
 
-#mode-toggle:focus {
-  outline: none;
-}
-
+#mode-toggle:focus,
 #mode-toggle:active {
+  outline: none;
   background: none;
 }
 
@@ -112,24 +108,21 @@ main {
 
 /* Tab content panels */
 .tab-content {
-  background-color: white;
   max-width: 600px;
   margin: auto;
   opacity: 0;
   transform: scale(0.95);
-  transition: opacity 0.4s ease, transform 0.4s ease, background-color 0.3s ease;
+  transition: opacity 0.4s ease, transform 0.4s ease;
   position: relative;
   display: none;
+  background-color: transparent;
+  /* removed faint box */
 }
 
 .tab-content.active {
   opacity: 1;
   transform: scale(1);
   display: block;
-}
-
-body.dark .tab-content {
-  background-color: #2c2c2c;
 }
 
 /* Home wrapper */
@@ -155,4 +148,48 @@ footer {
 body.dark footer {
   background: #222;
   color: #f5f5f5;
+}
+
+/* Home wrapper as a flex container */
+.home-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 900px;
+  margin: auto;
+  gap: 40px;
+  padding: 20px;
+}
+
+/* Left column (text) */
+.home-left {
+  flex: 1;
+  text-align: left;
+}
+
+/* Right column (image) */
+.home-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.home-right img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  /* optional styling */
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+  .home-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .home-right {
+    justify-content: center;
+    margin-top: 20px;
+  }
 }
