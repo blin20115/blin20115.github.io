@@ -9,41 +9,33 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  background: #f9f9f9;
+  background-color: white;
+  /* Change background to white */
+  color: #333;
+  /* Dark text for contrast */
+  scroll-behavior: smooth;
 }
 
 /* Navbar */
 header {
-  background: #0077ff;
-  color: white;
-}
-
-.navbar {
-  max-width: 900px;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 20px;
-}
-
-.navbar ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
+  background-color: #ffffff;
+  /* White navbar */
+  color: #0077ff;
+  /* Blue text links */
+  border-bottom: 1px solid #ddd;
+  /* subtle separation from page */
 }
 
 .navbar a {
-  color: white;
-  text-decoration: none;
-  padding: 8px 12px;
-  border-radius: 5px;
-  transition: background 0.3s;
+  color: #0077ff;
+  /* Blue links */
 }
 
 .navbar a:hover,
 .navbar a.active {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(0, 119, 255, 0.1);
+  /* light hover effect */
+  color: #0077ff;
 }
 
 /* Content area */
@@ -59,6 +51,8 @@ main {
 }
 
 .tab-content {
+  background-color: white;
+  /* white content panels */
   position: absolute;
   max-width: 600px;
   opacity: 0;
@@ -78,4 +72,14 @@ footer {
   text-align: center;
   padding: 15px;
   font-size: 0.9em;
+}
+
+h1 {
+  color: #0077ff;
+  /* keep your headings blue */
+}
+
+p {
+  color: #333;
+  /* dark text for readability */
 }
