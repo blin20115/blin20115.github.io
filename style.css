@@ -281,3 +281,31 @@ body.dark .project-info p {
   /* match or exceed your grid */
   width: 100%;
 }
+
+.resume-section {
+  display: flex;
+  justify-content: center;
+  /* centers horizontally */
+  padding: 40px 0;
+}
+
+.resume-frame {
+  width: 75vw;
+  /* 95% of viewport width */
+  max-width: none;
+  /* remove any max-width restriction */
+  height: 90vh;
+  /* almost full screen height */
+  border: none;
+  display: block;
+  margin: 20px auto;
+  /* center it */
+}
+
+#resume.tab-content {
+  max-width: 100%;
+  /* allow it to fill the screen */
+  width: 100%;
+  padding: 0 20px;
+  /* optional: small padding on sides */
+}
