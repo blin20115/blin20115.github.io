@@ -6,84 +6,151 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bobo Lin</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Mrs+Sheppards&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 
 <body>
 
-  <!-- Navigation Tabs -->
-  <header>
-    <nav class="navbar">
-      <div class="logo">Bobo Lin</div>
-      <ul>
-        <li><a href="#" class="tab-link active" data-target="home">Home</a></li>
-        <li><a href="#" class="tab-link" data-target="projects">Projects</a></li>
-        <li><a href="#" class="tab-link" data-target="resume">Resume</a></li>
-      </ul>
-      <button id="mode-toggle">🌙</button>
-    </nav>
-  </header>
-
-  <!-- Tabbed Content Panels -->
   <main>
     <section id="home" class="tab-content active">
-      <div class="home-wrapper">
-        <!-- Left column: Text -->
-        <div class="home-left">
-          <h1>Hello, I'm Bobo </h1>
-          <p>
-            Welcome to my website! I am currently a second year undergrad
-            at MIT studying computer science/artificial intelligence (Course 6-4) and
-            mathematics (Course 18). In my free time, I really like playing
-            Sudoku, working out, and trying new restaurants & cafes (my Beli is
-            @blin15)!
-          </p>
+      <div class="home-content">
+
+        <div class="home-header">
+          <h1 class="page-title">Bobo Lin</h1>
+          <div class="social-links">
+            <a href="mailto:blin15@mit.edu" target="_blank"><i class="fas fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/blin15" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/blin20115" target="_blank"><i class="fab fa-github"></i></a>
+          </div>
         </div>
 
-        <!-- Right column: Image -->
-        <div class="home-right">
-          <img src="images/my-notion-face-transparent.png" alt="Bobo" />
+        <div class="home-body">
+          <div class="home-text">
+            <p><strong>Currently:</strong></p>
+            <ul>
+              <li>Undergrad @ MIT, B.S. in Computer Science &amp; Mathematics</li>
+              <li>Software Development Engineer Intern @ AWS, CloudWatch Logs</li>
+            </ul>
+          </div>
+
+          <div class="sudoku-deco">
+            <div class="sudoku-box">
+              <div class="sudoku-cell">5</div>
+              <div class="sudoku-cell">3</div>
+              <div class="sudoku-cell"></div>
+              <div class="sudoku-cell">6</div>
+              <div class="sudoku-cell"></div>
+              <div class="sudoku-cell"></div>
+              <div class="sudoku-cell"></div>
+              <div class="sudoku-cell">9</div>
+              <div class="sudoku-cell">8</div>
+            </div>
+            <div class="sudoku-box">
+              <div class="sudoku-cell"></div>
+              <div class="sudoku-cell">7</div>
+              <div class="sudoku-cell"></div>
+              <div class="sudoku-cell">1</div>
+              <div class="sudoku-cell">9</div>
+              <div class="sudoku-cell">5</div>
+              <div class="sudoku-cell"></div>
+              <div class="sudoku-cell"></div>
+              <div class="sudoku-cell"></div>
+            </div>
+            <div class="sudoku-box">
+              <div class="sudoku-cell"></div>
+              <div class="sudoku-cell"></div>
+              <div class="sudoku-cell"></div>
+              <div class="sudoku-cell"></div>
+              <div class="sudoku-cell"></div>
+              <div class="sudoku-cell"></div>
+              <div class="sudoku-cell"></div>
+              <div class="sudoku-cell">6</div>
+              <div class="sudoku-cell"></div>
+            </div>
+            <div class="sudoku-box">
+              <div class="sudoku-cell">8</div>
+              <div class="sudoku-cell"></div>
+              <div class="sudoku-cell"></div>
+              <div class="sudoku-cell">4</div>
+              <div class="sudoku-cell"></div>
+              <div class="sudoku-cell"></div>
+              <div class="sudoku-cell">7</div>
+              <div class="sudoku-cell"></div>
+              <div class="sudoku-cell"></div>
+            </div>
+            <div class="sudoku-box">
+              <div class="sudoku-cell"></div>
+              <div class="sudoku-cell">6</div>
+              <div class="sudoku-cell"></div>
+              <div class="sudoku-cell">8</div>
+              <div class="sudoku-cell"></div>
+              <div class="sudoku-cell">3</div>
+              <div class="sudoku-cell"></div>
+              <div class="sudoku-cell">2</div>
+              <div class="sudoku-cell"></div>
+            </div>
+            <div class="sudoku-box">
+              <div class="sudoku-cell"></div>
+              <div class="sudoku-cell"></div>
+              <div class="sudoku-cell">3</div>
+              <div class="sudoku-cell"></div>
+              <div class="sudoku-cell"></div>
+              <div class="sudoku-cell">1</div>
+              <div class="sudoku-cell"></div>
+              <div class="sudoku-cell"></div>
+              <div class="sudoku-cell">6</div>
+            </div>
+            <div class="sudoku-box">
+              <div class="sudoku-cell"></div>
+              <div class="sudoku-cell">6</div>
+              <div class="sudoku-cell"></div>
+              <div class="sudoku-cell"></div>
+              <div class="sudoku-cell"></div>
+              <div class="sudoku-cell"></div>
+              <div class="sudoku-cell"></div>
+              <div class="sudoku-cell"></div>
+              <div class="sudoku-cell"></div>
+            </div>
+            <div class="sudoku-box">
+              <div class="sudoku-cell"></div>
+              <div class="sudoku-cell"></div>
+              <div class="sudoku-cell"></div>
+              <div class="sudoku-cell">4</div>
+              <div class="sudoku-cell">1</div>
+              <div class="sudoku-cell">9</div>
+              <div class="sudoku-cell"></div>
+              <div class="sudoku-cell">8</div>
+              <div class="sudoku-cell"></div>
+            </div>
+            <div class="sudoku-box">
+              <div class="sudoku-cell">2</div>
+              <div class="sudoku-cell">8</div>
+              <div class="sudoku-cell"></div>
+              <div class="sudoku-cell"></div>
+              <div class="sudoku-cell"></div>
+              <div class="sudoku-cell">5</div>
+              <div class="sudoku-cell"></div>
+              <div class="sudoku-cell">7</div>
+              <div class="sudoku-cell">9</div>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
 
-    <section id="projects" class="tab-content">
-      <h1>Projects</h1>
-      <div class="projects-grid">
-        <!-- Add more project-card blocks; each row will hold 3 -->
-        <a target="_blank" class="project-card">
-          <div class="project-image" style="background-image: url('images/nasa_img.png');"></div>
-          <div class="project-info">
-            <h3>Using AI/ML for Space Biology Research</h3>
-            <p>With NASA Open Science Analysis Working Groups training program.</p>
-          </div>
-        </a>
-
-        <a href="https://drive.google.com/file/d/1S36IkP3aaraJtm5Qm8wgXEbmJ5SzBpsF/view?usp=sharing" target="_blank"
-          class="project-card">
-          <div class="project-image" style="background-image: url('images/Lin_Bobo_RS.pptx.jpg');"></div>
-          <div class="project-info">
-            <h3>Visualization of cancer patient symptoms</h3>
-            <p>As part of the University of Chicago Medicine ResearcHStart program.</p>
-          </div>
-        </a>
+        <div class="previously">
+          <p><strong>Previously:</strong></p>
+          <ul>
+            <li>Undergraduate Researcher @ MIT AeroAstro: Generative AI for multi-temporal satellite event captioning
+            </li>
+            <li>Undergraduate Researcher @ MIT Brain &amp; Cognitive Sciences: Neural mechanisms of state transitions in
+              the brain</li>
+            <li>Software Development Engineer Intern @ AWS: CloudWatch Logs internal API support</li>
+          </ul>
+        </div>
 
       </div>
-    </section>
-
-
-    <section id="resume" class="tab-content">
-      <h1>Resume</h1>
-      <iframe src="assets/LinBobo_Resume_250906v1.pdf" class="resume-frame" frameborder="0"></iframe>
     </section>
   </main>
-
-  <footer>
-    <a href="mailto:blin15@mit.edu" target="_blank"><i class="fas fa-envelope"></i></a>
-    <a href="https://www.linkedin.com/in/blin15" target="_blank"><i class="fab fa-linkedin"></i></a>
-    <a href="https://github.com/blin20115" target="_blank"><i class="fab fa-github"></i></a>
-  </footer>
 
   <script src="script.js"></script>
 </body>
