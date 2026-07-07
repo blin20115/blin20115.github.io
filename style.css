@@ -65,11 +65,26 @@ main {
 .home-body {
   display: flex;
   gap: 2.5rem;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .home-text {
   flex: 1;
+}
+
+.sudoku-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0;
+  width: 212px;
+}
+
+.sudoku-caption {
+  margin-top: 0.4rem;
+  font-size: 0.625rem;
+  color: #888;
+  zoom: 0.68;
 }
 
 .sudoku-deco {
@@ -108,6 +123,16 @@ main {
   margin-top: 2rem;
 }
 
+.date {
+  display: block;
+  font-size: 0.8rem;
+  color: #555;
+}
+
+.desc {
+  color: #000;
+}
+
 /* -------------------- Body Text -------------------- */
 .home-content strong {
   color: #1a2e5a;
@@ -125,6 +150,14 @@ main {
   line-height: 1.8;
   color: #000;
   padding-left: 1.2rem;
+}
+
+/* -------------------- Responsive -------------------- */
+@media (max-width: 600px) {
+  .home-body {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
 }
 
 /* -------------------- Links -------------------- */
