@@ -150,12 +150,18 @@ main {
   color: #555;
 }
 
-.desc {
+.role {
   display: block;
-  font-size: 0.92rem;
   color: #000;
-  margin-top: 0.15rem;
-  margin-left: 0.6rem;
+}
+
+.desc {
+  color: #000;
+}
+
+.stack {
+  font-size: 0.75rem;
+  color: #555;
 }
 
 /* -------------------- Body Text -------------------- */
