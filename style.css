@@ -77,7 +77,7 @@ main {
   text-align: center;
 }
 
-.home-text p + p {
+.home-text p+p {
   margin-top: 1rem;
 }
 
