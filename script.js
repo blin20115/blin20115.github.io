@@ -34,9 +34,11 @@ function display(puzzle) {
 
 let last = -1;
 
-sudoku.addEventListener('mouseenter', () => {
-  let next;
-  do { next = Math.floor(Math.random() * puzzles.length); } while (next === last);
-  last = next;
-  display(puzzles[next]);
-});
+if (sudoku) {
+  sudoku.addEventListener('mouseenter', () => {
+    let next;
+    do { next = Math.floor(Math.random() * puzzles.length); } while (next === last);
+    last = next;
+    display(puzzles[next]);
+  });
+}
