@@ -21,6 +21,7 @@ main { padding: 3.5rem 1.5rem 5rem; }
 .tab-content { display: none; }
 .tab-content.active { display: block; }
 .home-content { max-width: 680px; margin: 0 auto; }
+.gallery-content { max-width: 680px; margin: 0 auto; }
 
 .home-header {
   display: flex;
@@ -42,6 +43,9 @@ main { padding: 3.5rem 1.5rem 5rem; }
 .social-links { display: flex; gap: .45rem; color: var(--muted); font-family: "Space Mono", monospace; font-size: .7rem; white-space: nowrap; }
 a { color: var(--blue); text-decoration: underline; text-underline-offset: .14em; }
 a:hover { color: #0e1e40; }
+.gallery-link { font-weight: 500; white-space: nowrap; }
+.gallery-link span { display: inline-block; transition: transform .15s ease; }
+.gallery-link:hover span { transform: translateX(.2rem); }
 
 .home-body {
   display: grid;
@@ -75,11 +79,31 @@ a:hover { color: #0e1e40; }
 .desc { color: #333; }
 .stack { color: var(--muted); font-family: "Space Mono", monospace; font-size: .67rem; }
 
+.gallery-header { margin-bottom: 1rem; }
+.back-link { display: inline-block; margin-bottom: 1.25rem; font-family: "Space Mono", monospace; font-size: .7rem; }
+.collection-nav { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.25rem; font-family: "Space Mono", monospace; font-size: .7rem; }
+.gallery-intro { margin: 0 0 1.5rem; line-height: 1.65; }
+.gallery-list { border-top: 1px solid var(--line); }
+.gallery-item { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; align-items: center; gap: 1.25rem; padding: .7rem 0; border-bottom: 1px solid var(--line); color: var(--ink); text-decoration: none; }
+.gallery-item:hover { color: var(--blue); }
+.gallery-item-title { display: block; }
+.gallery-item-title { font-weight: 700; }
+.gallery-item-meta, .collection-meta { color: var(--muted); font-size: .8rem; }
+.gallery-item-meta, .collection-meta { font-family: "Space Mono", monospace; font-size: .67rem; }
+.gallery-item-arrow { font-size: 1.2rem; }
+.collection-header { margin-bottom: 2rem; }
+.collection-meta { margin: 0 0 .65rem; }
+.collection-header .page-title { margin-bottom: 1rem; }
+.photo-placeholder { display: grid; min-height: 360px; margin-top: 1rem; place-items: center; background: #f5f5f3; color: var(--muted); font-family: "Space Mono", monospace; font-size: .7rem; }
+
 @media (max-width: 560px) {
   main { padding: 2.5rem 1.25rem 4rem; }
   .home-header { align-items: flex-start; flex-direction: column; gap: 1rem; margin-bottom: 2.25rem; }
   .home-body { grid-template-columns: 1fr; gap: 2rem; }
   .sudoku-col { width: 154px; }
+  .gallery-item { grid-template-columns: minmax(0, 1fr) auto; gap: .75rem; }
+  .gallery-item-meta { grid-column: 1; }
+  .gallery-item-arrow { grid-column: 2; grid-row: 1 / span 2; }
   .date { display: block; margin-bottom: .2rem; }
   .previously { margin-top: 2.6rem; }
 }
