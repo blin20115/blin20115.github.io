@@ -97,7 +97,7 @@ a:hover { color: #0e1e40; }
 .collection-header .page-title { margin-bottom: 1rem; }
 .collection-intro { max-width: 34rem; margin: 0; color: var(--muted); line-height: 1.6; }
 .photo-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: start; gap: .3rem; }
-.blue-before-red-grid { align-items: start; }
+.blue-before-red-grid { align-items: start; gap: .3rem; }
 .blue-before-red-grid .photo-column { display: grid; align-content: start; gap: .3rem; }
 .photo-card, .photo-placeholder { display: block; width: 100%; min-height: 250px; margin: 0; overflow: hidden; border: 0; background: #f2f2ef; }
 .photo-card { min-height: 0; }
