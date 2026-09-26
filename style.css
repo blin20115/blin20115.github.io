@@ -104,9 +104,11 @@ a:hover { color: #0e1e40; }
 .photo-card, .photo-placeholder { display: block; width: 100%; min-height: 250px; margin: 0; overflow: hidden; border: 0; background: #f2f2ef; }
 .photo-card { min-height: 0; }
 .photo-card img { display: block; width: 100%; height: auto; }
-.between-semesters-grid { display: grid; gap: .3rem; }
-.between-semesters-row { display: flex; align-items: start; gap: .3rem; }
-.between-semesters-row .photo-card { flex: var(--photo-ratio) 1 0; min-width: 0; }
+.between-semesters-grid, .justified-photo-grid { display: grid; gap: .3rem; }
+.between-semesters-row, .justified-photo-row { display: flex; align-items: start; gap: .3rem; }
+.between-semesters-row .photo-card, .justified-photo-row .photo-card { flex: var(--photo-ratio) 1 0; min-width: 0; }
+.familiar-feature { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.86fr); align-items: start; gap: .3rem; }
+.familiar-feature-stack { display: grid; gap: .3rem; }
 .us-out-west-details { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .3rem; }
 .us-out-west-details .photo-card { aspect-ratio: 4 / 3; }
 .us-out-west-details .photo-card img { height: 100%; object-fit: cover; }
