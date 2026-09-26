@@ -99,6 +99,8 @@ a:hover { color: #0e1e40; }
 .photo-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: start; gap: .3rem; }
 .blue-before-red-grid { align-items: start; gap: .3rem; }
 .photo-grid .photo-column { display: grid; align-content: start; gap: .3rem; }
+.photo-grid.institute-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.photo-card-full { grid-column: 1 / -1; }
 .photo-card, .photo-placeholder { display: block; width: 100%; min-height: 250px; margin: 0; overflow: hidden; border: 0; background: #f2f2ef; }
 .photo-card { min-height: 0; }
 .photo-card img { display: block; width: 100%; height: auto; }
